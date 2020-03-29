@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MeshWidget</class>
+ <widget class="QWidget" name="MeshWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1027</width>
+    <height>873</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>150</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QVTKOpenGLWidget" name="viewerWidget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_mesh">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <attribute name="title">
+       <string>Mesh</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="1">
+        <widget class="QGroupBox" name="groupBox_element">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Element</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="checkBox_face">
+            <property name="text">
+             <string>face</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="checkBox_edge">
+            <property name="text">
+             <string>edge</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QDoubleSpinBox" name="doubleSpinBox_opacity">
+            <property name="maximum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.100000000000000</double>
+            </property>
+            <property name="value">
+             <double>1.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Opacity :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkBox_vertex_id">
+            <property name="text">
+             <string>vertex_id</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QTextBrowser" name="textBrowser_mesh">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="pushButton_read">
+         <property name="text">
+          <string>Read mesh</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_actors">
+      <attribute name="title">
+       <string>Actors</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>Properties</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="1" column="2">
+           <widget class="QFrame" name="color_frame">
+            <property name="autoFillBackground">
+             <bool>true</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QDoubleSpinBox" name="actor_opacity">
+            <property name="maximum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.100000000000000</double>
+            </property>
+            <property name="value">
+             <double>1.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QDoubleSpinBox" name="actor_size"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Size</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Opacity :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_actor_color">
+            <property name="text">
+             <string>Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2">
+           <widget class="QPushButton" name="actor_refresh">
+            <property name="text">
+             <string>Refresh</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_refresh_listWidget">
+         <property name="text">
+          <string>Refresh</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="listWidget_actor3d">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>256</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="listWidget_actor2d"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKOpenGLWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKOpenGLWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>doubleSpinBox_opacity</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>MeshWidget</receiver>
+   <slot>updateMeshOpacity()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>333</x>
+     <y>799</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>500</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>updateMesh()</slot>
+  <slot>openStressFile()</slot>
+  <slot>renderField()</slot>
+  <slot>updateMeshOpacity()</slot>
+ </slots>
+</ui>

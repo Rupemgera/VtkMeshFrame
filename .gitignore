@@ -1,0 +1,9 @@
+[Bb]uild/
+[Bb]in/
+[Dd]ug/
+[Rr]elease/
+[Oo]ut/
+.vs/
+.vscode/
+CMakeSettings.json
+vsproject/
